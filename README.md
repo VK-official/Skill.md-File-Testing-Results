@@ -1,137 +1,124 @@
-# 🚀 Same Prompt. Same Model. Different Outcome
+# Same Prompt. Same Model. Different Outcome.
 
-## 🧪 An Experimental Study on Structured Context in AI
+## An Experimental Study on Structured Context in AI
 
-What happens when you provide an AI model with structured context instead of relying purely on prompts?
+What happens when an AI model is provided with structured context instead of relying solely on prompts?
 
-This project explores how **structured constraints (`@skill.md`)** influence AI-generated outputs in terms of quality, performance, and consistency.
+This repository contains the raw outputs and supporting materials for an experiment comparing standard prompt-based generation with a structured approach using `@skill.md`.
 
-🔗 **Live Demo:**
+---
+
+## Live Experiment
+
+Website version of this experiment:  
 https://how-a-skill-file-helps-an-agent.vercel.app/
 
 ---
 
-## 📌 Objective
+## Experiment Objective
 
-To evaluate whether structured context improves:
+This study evaluates whether structured context improves:
 
-* 🎯 UI consistency
-* 🧩 Code maintainability
-* ⚡ Rendering performance
-* 👨‍💻 Developer experience
-
----
-
-## ⚙️ Experimental Setup
-
-| Component | Configuration           |
-| --------- | ----------------------- |
-| Model     | Gemini 3 Flash          |
-| Framework | Antigravity             |
-| Prompt    | Identical (Prompt A)    |
-| Variable  | Presence of `@skill.md` |
-| Editing   | None (raw outputs only) |
+- UI consistency  
+- Code maintainability  
+- Rendering performance  
+- Developer experience  
 
 ---
 
-## 🧪 Test Conditions
+## Experimental Setup
 
-### 🔴 Unguided Generation
-
-* Prompt A only
-* No structured constraints
-* Fully free-form generation
-
-### 🟢 Guided Generation
-
-* Prompt A + `@skill.md`
-* Structured rules applied
-* Constrained generation
+| Component   | Configuration                         |
+|------------|--------------------------------------|
+| Model      | Gemini 3 Flash                       |
+| Framework  | Antigravity                          |
+| Prompt     | Prompt A (identical in both cases)   |
+| Variable   | Presence of `@skill.md`              |
+| Editing    | None (no manual changes applied)     |
 
 ---
 
-## 📊 Results & Observations
+## Test Conditions
 
-### 🏗️ DOM Complexity
+### Unguided Generation
+- Prompt A only  
+- No structured context  
 
-* Guided: ~45 nodes (clean & minimal)
-* Unguided: ~110+ nodes (bloated structure)
-
-### 🎬 Animation Behavior
-
-* Guided: Smooth, staggered transitions
-* Unguided: Simultaneous, less controlled
-
-### ⚡ Performance
-
-* Guided: ~60 FPS, Lighthouse score 95+
-* Unguided: ~40 FPS dips, Lighthouse ~70–80
-
-### 🧼 Code Quality
-
-* Guided: Consistent spacing (`mt-8`, `ml-4`)
-* Unguided: Arbitrary values (`mt-[43px]`)
+### Guided Generation
+- Prompt A with `@skill.md`  
+- Structured constraints applied  
 
 ---
 
-## 🧠 Key Insight
+## Observations
 
-> Structured context does not replace prompting — it enhances it.
+### DOM Structure
+- Guided: ~45 nodes (lean and structured)  
+- Unguided: ~110+ nodes (more complex hierarchy)  
 
-By introducing modular constraints like `@skill.md`, the model produces:
+### Animation Behavior
+- Guided: staggered transitions with controlled timing  
+- Unguided: simultaneous animation triggers  
 
-* More predictable outputs
-* Cleaner code
-* Better performance
+### Performance
+- Guided: ~60 FPS, Lighthouse score above 95  
+- Unguided: occasional drops to ~40 FPS, Lighthouse ~70–80  
 
----
-
-## ⚖️ Trade-offs
-
-| Advantage              | Limitation             |
-| ---------------------- | ---------------------- |
-| Cleaner code           | Less creative freedom  |
-| Better performance     | Requires upfront setup |
-| Consistent UI patterns | More rigid output      |
+### Code Quality
+- Guided: standardized utility classes (e.g., `mt-8`, `ml-4`)  
+- Unguided: arbitrary spacing values (e.g., `mt-[43px]`)  
 
 ---
 
-## 📁 Project Structure
+## Key Insight
 
-```
-/project-root
-│
-├── guided/
-│   ├── output/
-│   └── skill.md
-│
-├── unguided/
-│   └── output/
-│
-├── assets/
-│
-├── README.md
-└── ...
-```
+Structured context does not replace prompting. It complements it.
 
-> Note: Structure may vary depending on your setup.
+Providing modular constraints such as `skill.md` appears to guide AI systems toward generating more predictable, maintainable, and performance-efficient outputs.
 
 ---
 
-## 🚀 Conclusion
+## Trade-offs
 
-Structured context acts as a **control layer** for AI systems.
+While effective, the structured approach introduces limitations:
 
-Instead of relying solely on prompts, combining them with modular constraints leads to:
+- Requires upfront effort to design constraints  
+- Reduces creative variability  
+- Encourages stricter output patterns  
 
-* Higher reliability
-* Better engineering outcomes
-* More scalable AI-assisted development
+The appropriate approach depends on the goals of the project.
+
+---
+
 
 ---
 
-## 📬 Feedback
+## Reproducibility
 
-If you found this interesting or have ideas to extend the experiment, feel free to open an issue or contribute.
+To reproduce this experiment:
+
+1. Use the provided `prompt.txt`  
+2. Run once without `@skill.md`  
+3. Run again with `@skill.md`  
+4. Compare outputs under identical conditions  
 
 ---
+
+## Disclaimer
+
+This experiment was conducted using the Antigravity framework with the Gemini 3 Flash model.
+
+- All outputs were generated by AI  
+- No manual editing or refinement was applied  
+- This project is intended for research and educational purposes only  
+
+It does not aim to evaluate or criticize any AI system.  
+All observations are limited to this specific experimental setup.
+
+---
+
+## Conclusion
+
+Small structural inputs can produce meaningful differences in output quality.
+
+This experiment highlights the importance of guidance, not just prompting, in shaping AI-generated results.
